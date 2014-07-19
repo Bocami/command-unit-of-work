@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Command Unit of Work</title>
+    <authors>Jonatan Pedersen</authors>
+    <owners>Jonatan Pedersen</owners>
+    <licenseUrl>https://github.com/Bocami/command-unit-of-work/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Bocami/command-unit-of-work</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Command Unit of Work</description>
+    <copyright>Copyright 2014</copyright>
+    <tags>Command Query Separation</tags>
+  </metadata>
+</package>
