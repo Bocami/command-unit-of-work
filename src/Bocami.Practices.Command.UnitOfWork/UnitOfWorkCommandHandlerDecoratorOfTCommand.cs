@@ -1,7 +1,6 @@
-﻿using System;
-using Bocami.Practices.AbstractFactory;
-using Bocami.Practices.Decorator;
+﻿using Bocami.Practices.Decorator;
 using Bocami.Practices.UnitOfWork;
+using System;
 
 namespace Bocami.Practices.Command.UnitOfWork
 {
@@ -9,24 +8,22 @@ namespace Bocami.Practices.Command.UnitOfWork
             where TCommand : class, ICommand
     {
         private readonly ICommandHandler<TCommand> commandHandler;
-        private readonly IAbstractFactory<IUnitOfWork> unitOfWorkFactory;
+        private readonly IUnitOfWork unitOfWork;
 
-        public UnitOfWorkCommandHandlerDecorator(ICommandHandler<TCommand> commandHandler, IAbstractFactory<IUnitOfWork> unitOfWorkFactory)
+        public UnitOfWorkCommandHandlerDecorator(ICommandHandler<TCommand> commandHandler, IUnitOfWork unitOfWork)
         {
             if (commandHandler == null)
                 throw new ArgumentNullException("commandHandler");
 
-            if (unitOfWorkFactory == null)
-                throw new ArgumentNullException("unitOfWorkFactory");
+            if (unitOfWork == null)
+                throw new ArgumentNullException("unitOfWork");
 
             this.commandHandler = commandHandler;
-            this.unitOfWorkFactory = unitOfWorkFactory;
+            this.unitOfWork = unitOfWork;
         }
 
         public void Handle(TCommand command)
         {
-            var unitOfWork = unitOfWorkFactory.Create();
-            
             commandHandler.Handle(command);
 
             unitOfWork.Commit();

@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bocami.Practices.AbstractFactory">
-      <HintPath>..\packages\Bocami.Practices.AbstractFactory.1.0.0\lib\net45\Bocami.Practices.AbstractFactory.dll</HintPath>
-    </Reference>
     <Reference Include="Bocami.Practices.Command">
       <HintPath>..\packages\Bocami.Practices.Command.1.0.0\lib\net451\Bocami.Practices.Command.dll</HintPath>
     </Reference>
