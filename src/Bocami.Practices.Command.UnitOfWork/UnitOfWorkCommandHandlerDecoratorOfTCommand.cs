@@ -5,13 +5,13 @@ using Bocami.Practices.UnitOfWork;
 
 namespace Bocami.Practices.Command.UnitOfWork
 {
-    public abstract class UnitOfWorkCommandHandlerDecorator<TCommand> : ICommandHandler<TCommand>, IDecorator<ICommandHandler<TCommand>>
+    public class UnitOfWorkCommandHandlerDecorator<TCommand> : ICommandHandler<TCommand>, IDecorator<ICommandHandler<TCommand>>
             where TCommand : class, ICommand
     {
         private readonly ICommandHandler<TCommand> commandHandler;
         private readonly IAbstractFactory<IUnitOfWork> unitOfWorkFactory;
 
-        protected UnitOfWorkCommandHandlerDecorator(ICommandHandler<TCommand> commandHandler, IAbstractFactory<IUnitOfWork> unitOfWorkFactory)
+        public UnitOfWorkCommandHandlerDecorator(ICommandHandler<TCommand> commandHandler, IAbstractFactory<IUnitOfWork> unitOfWorkFactory)
         {
             if (commandHandler == null)
                 throw new ArgumentNullException("commandHandler");
