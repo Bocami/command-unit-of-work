@@ -10,9 +10,9 @@ Install-Package Bocami.Practices.Command.UnitOfWork -Source https://www.myget.or
 ```
 
 ## Dependencies 
-* [Bocami.Practices.Command](https://github.com/Bocami/command)
-* [Bocami.Practices.Decorator](https://github.com/Bocami/decorator)
-* [Bocami.Practices.UnitOfWork](https://github.com/Bocami/unit-of-work)
+* [Bocami.Practices.Command (≥ 1.0.0)](https://github.com/Bocami/command)
+* [Bocami.Practices.Decorator (≥ 1.0.0)](https://github.com/Bocami/decorator)
+* [Bocami.Practices.UnitOfWork (≥ 1.0.0)](https://github.com/Bocami/unit-of-work)
   
 ## Usage
 
