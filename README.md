@@ -9,6 +9,11 @@ Decorates an ICommandHandler of TCommand with an IUnitOfWork.
 Install-Package Bocami.Practices.Command.UnitOfWork -Source https://www.myget.org/F/bocami/
 ```
 
+## Dependencies 
+* [Bocami.Practices.Command](https://github.com/Bocami/command)
+* [Bocami.Practices.Decorator](https://github.com/Bocami/decorator)
+* [Bocami.Practices.UnitOfWork](https://github.com/Bocami/unit-of-work)
+  
 ## Usage
 
 ```csharp
